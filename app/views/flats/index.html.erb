@@ -1,1 +1,17 @@
+<nav class="navbar navbar-expand-xl navbar-light bg-light">
+  <div class="container-fluid">Simple Airbnb!</div>
+</nav>
+
 <h1>Here are all the available flats!:</h1>
+<div class="d-flex">
+  <% @flats.each do |flat|%>
+  <div class="card col-4 mx-3" style="width: 20rem;">
+
+      <div class="card-body">
+        <h5 class="card-title"> Name:<%= flat.name%></h5>
+        <br>
+        Description: <%= flat.description%>
+      </div>
+  </div>
+  <% end%>
+</div>
